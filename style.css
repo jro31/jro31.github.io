@@ -1,8 +1,27 @@
-body {
+#index-page-body {
   background-image: url('images/duck.jpg');
   background-size: cover;
   background-position: 50% 15%;
   margin: 0;
+}
+
+#index-page-body .typewriter {
+  position: absolute;
+}
+
+#narrator {
+  top: 100px;
+  left: 100px;
+}
+
+#duck {
+  top: 300px;
+  left: 20px;
+}
+
+#bartender {
+  top: 400px;
+  right: 50px;
 }
 
 .navbar {
