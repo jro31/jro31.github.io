@@ -1,27 +1,51 @@
+var shortPause = 500
+var longPause = 3000
+
 function typeWriter() {
   var initialPause = 2000
   setTimeout( function(){
-    var sentences = [
-      // Sentence, pause after, typewriter, clear after
-      ['A duck walks into a bar and asks the bartender,', 500, 'narrator', false],
-      ['"Got any bread?"', 3000, 'duck', true],
-      ['The bartender says', 500, 'narrator', false],
-      ['"No"', 3000, 'bartender', false]
+    var phrases = [
+      {text: 'A duck walks into a bar and asks the bartender', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'The duck says again', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'Again, the duck asks', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No, we have no bread"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'The duck repeats', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender angrily says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No, we haven\'t got any bread"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'The duck says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No, are you deaf? We haven\'t got any bread, ask me again and I\'ll nail your beak to the bar, you irritating little bird!"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'The duck says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any nails?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
+      {text: 'The bartender says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"No"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: 'The duck says', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
+      {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true}
     ];
     var speed = 50;
     var totalPause = 0
-    $.each(sentences, function(_, value) {
+    $.each(phrases, function(_, phrase) {
       var totalSpeed = 0
       setTimeout( function() {
-        $.each(value[0].split(''), function(index, letter) {
+        $.each(phrase.text.split(''), function(index, letter) {
           setTimeout( function(){
-            $(`#${value[2]}`).append(letter)
-            if (index === value[0].length - 1 && value[3]) setTimeout( function() { $('.typewriter').text('') }, value[1])
+            $(`#${phrase.typewriter}`).append(letter)
+            if (index === phrase.text.length - 1 && phrase.clearAfter) setTimeout( function() { $('.typewriter').text('') }, phrase.pauseAfter)
           }, totalSpeed)
           totalSpeed += speed;
         })
       }, totalPause)
-      totalPause += (value[0].length * speed) + value[1]
+      totalPause += (phrase.text.length * speed) + phrase.pauseAfter
     })
   }, initialPause)
 }
