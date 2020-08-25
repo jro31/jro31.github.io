@@ -1,3 +1,7 @@
+body {
+  font-size: 20px;
+}
+
 #index-page-body {
   background-image: url('images/duck.jpg');
   background-size: cover;
@@ -5,29 +9,44 @@
   margin: 0;
 }
 
+#custom-navbar {
+  height: 60px;
+  /*font-size: 20px;*/
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+#mobile-menu {
+  font-size: 40px;
+}
+
+#hamburger {
+
+}
+
 #index-page-body .typewriter {
   position: absolute;
+  font-size: 40px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #narrator {
-  top: 100px;
-  left: 100px;
+  top: calc(60px + 5%);
+  left: 30%;
+  width: 40%;
+  text-align: center;
 }
 
 #duck {
-  top: 300px;
-  left: 20px;
+  top: calc(60px + 40%);
+  left: 5%;
+  width: 30%;
+  text-align: left;
 }
 
 #bartender {
-  top: 400px;
-  right: 50px;
-}
-
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 21px 0;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  top: calc(60px + 55%);
+  left: 65%;
+  width: 30%;
+  text-align: right;
 }
