@@ -17,7 +17,7 @@ function populateMenu() {
   $.each(menuItems(), function(_, item) {
     $('#mobile-menu-items, #desktop-menu').append(
       '<div class="py-3 pl-3 p-md-0 m-0 ml-md-5">' +
-        `<a href="">` +
+        `<a href="${item.link}.html">` +
           `<i class="${item.iClass}"></i>` +
           `<span class="m-1">${item.title}</span>` +
         '</a>' +
@@ -28,9 +28,9 @@ function populateMenu() {
 
 function menuItems() {
   return ([
-    { title: 'My story', iClass: 'fas fa-globe' },
-    { title: 'Projects', iClass: 'fas fa-layer-group' },
-    { title: 'Contact', iClass: 'fas fa-pencil-alt' }
+    { title: 'My story', iClass: 'fas fa-globe', link: 'my_story' },
+    { title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects' },
+    { title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact' }
   ])
 }
 
@@ -61,14 +61,15 @@ function typeWriter() {
       {text: 'The duck says,', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
       {text: '"Got any bread?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
       {text: 'The bartender says,', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
-      {text: '"No, are you deaf? We haven\'t got any bread, ask me again and I\'ll nail your beak to the bar, you irritating little bird!"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
+      {text: '"No, are you deaf? We haven\'t got any bread."', pauseAfter: shortPause, typewriter: 'bartender', clearAfter: 'bartender'},
+      {text: '"Ask me again and I\'ll nail your beak to the bar,"', pauseAfter: shortPause, typewriter: 'bartender', clearAfter: 'bartender'},
+      {text: '"you irritating little bird!"', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
       {text: 'The duck says,', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
       {text: '"Got any nails?"', pauseAfter: longPause, typewriter: 'duck', clearAfter: true},
       {text: 'The bartender says,', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
       {text: '"No."', pauseAfter: longPause, typewriter: 'bartender', clearAfter: true},
       {text: 'The duck says,', pauseAfter: shortPause, typewriter: 'narrator', clearAfter: false},
-      {text: '"Got any bread?"', pauseAfter: veryLongPause, typewriter: 'duck', clearAfter: true},
-      {text: '"Quack quack"', pauseAfter: veryLongPause, typewriter: 'duck', clearAfter: true}
+      {text: '"Got any bread?"', pauseAfter: veryLongPause, typewriter: 'duck', clearAfter: true}
     ];
     var speed = 50;
     var totalPause = 0
@@ -78,7 +79,9 @@ function typeWriter() {
         $.each(phrase.text.split(''), function(index, letter) {
           setTimeout( function(){
             $(`#${phrase.typewriter}`).append(letter)
-            if (index === phrase.text.length - 1 && phrase.clearAfter) setTimeout( function() { $('.typewriter').text('') }, phrase.pauseAfter)
+            if (index === phrase.text.length - 1 && phrase.clearAfter) setTimeout( function() {
+              phrase.clearAfter === true ? $('.typewriter').text('') : $(`#${phrase.clearAfter}`).text('')
+            }, phrase.pauseAfter)
           }, totalSpeed)
           totalSpeed += speed;
         })

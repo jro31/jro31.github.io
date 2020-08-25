@@ -1,5 +1,6 @@
 body {
   font-size: 20px;
+  min-height: 100vh;
 }
 
 #index-page-body {
@@ -7,6 +8,15 @@ body {
   background-size: cover;
   background-position: 50% 15%;
   margin: 0;
+}
+
+#custom-navbar-container a {
+  color: black;
+  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+
+#custom-navbar-container a:hover {
+  text-decoration: none;
 }
 
 #custom-navbar {
@@ -25,16 +35,15 @@ body {
 
 #mobile-menu-items {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
 }
 
 #desktop-menu {
-  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+
 }
 
-#index-page-body .typewriter {
+.typewriter {
   position: absolute;
-  font-size: 40px;
+  font-size: 25px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
@@ -47,21 +56,45 @@ body {
 }
 
 #duck {
-  top: calc(60px + 40%);
+  top: calc(60px + 45%);
   left: 5%;
-  width: 30%;
+  width: 40%;
   text-align: left;
 }
 
 #bartender {
-  top: calc(60px + 55%);
-  left: 65%;
-  width: 30%;
+  top: calc(60px + 35%);
+  left: 55%;
+  width: 40%;
   text-align: right;
+}
+
+@media (min-width: 576px) {
+  .typewriter {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 768px) {
   #mobile-menu-items {
     display: none;
+  }
+
+  #duck {
+    top: calc(60px + 55%);
+    left: 5%;
+    width: 30%;
+  }
+
+  #bartender {
+    top: calc(60px + 40%);
+    left: 65%;
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
+  .typewriter {
+    font-size: 40px;
   }
 }
