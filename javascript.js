@@ -1,3 +1,39 @@
+function populateNavbar() {
+  $('body').prepend(
+    '<div id="custom-navbar-container">' +
+      '<div id="custom-navbar">' +
+        '<div id="mobile-menu" class="d-flex d-md-none justify-content-center align-items-center h-100">' +
+          '<i id="hamburger" class="fas fa-bars"></i>' +
+        '</div>' +
+        '<div id="desktop-menu" class="d-none d-md-flex justify-content-end align-items-center h-100 pr-5"></div>' +
+      '</div>' +
+      '<div id="mobile-menu-items" class="d-none"></div>' +
+    '</div>'
+  );
+  populateMenu();
+}
+
+function populateMenu() {
+  $.each(menuItems(), function(_, item) {
+    $('#mobile-menu-items, #desktop-menu').append(
+      '<div class="py-3 pl-3 p-md-0 m-0 ml-md-5">' +
+        `<a href="">` +
+          `<i class="${item.iClass}"></i>` +
+          `<span class="m-1">${item.title}</span>` +
+        '</a>' +
+      '</div>'
+    )
+  })
+}
+
+function menuItems() {
+  return ([
+    { title: 'My story', iClass: 'fas fa-globe' },
+    { title: 'Projects', iClass: 'fas fa-layer-group' },
+    { title: 'Contact', iClass: 'fas fa-pencil-alt' }
+  ])
+}
+
 function typeWriter() {
   var shortPause = 500
   var longPause = 3000
@@ -52,8 +88,11 @@ function typeWriter() {
   }, initialPause)
 }
 
-$('#hamburger').click(function() {
-  console.log('🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀')
-});
+$('body').on('click', '#hamburger', function() {
+  $('#mobile-menu-items').toggleClass('d-none')
+})
 
-window.onload = typeWriter;
+window.onload = function() {
+  populateNavbar();
+  typeWriter();
+}
