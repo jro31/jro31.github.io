@@ -4,14 +4,14 @@ body {
 }
 
 #index-page-body {
-  background-image: url('images/duck.jpg');
+  background-image: url('images/duck_xs.jpg');
   background-size: cover;
   background-position: 50% 15%;
   margin: 0;
 }
 
 #my-story-page-body {
-  background-image: url('images/beach.jpg');
+  background-image: url('images/beach_xs.jpg');
   background-size: 100% auto;
 }
 
@@ -93,12 +93,28 @@ body {
 }
 
 @media (min-width: 576px) {
+  #index-page-body {
+    background-image: url('images/duck_sm.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach_sm.jpg');
+  }
+
   .typewriter {
     font-size: 30px;
   }
 }
 
 @media (min-width: 768px) {
+  #index-page-body {
+    background-image: url('images/duck_md.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach_md.jpg');
+  }
+
   #mobile-menu-items {
     display: none;
   }
@@ -121,7 +137,45 @@ body {
 }
 
 @media (min-width: 992px) {
+  #index-page-body {
+    background-image: url('images/duck_lg.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach_lg.jpg');
+  }
+
   .typewriter {
     font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #index-page-body {
+    background-image: url('images/duck_xl.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach_xl.jpg');
+  }
+}
+
+@media (min-width: 1500px) {
+  #index-page-body {
+    background-image: url('images/duck_xxl.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach_xxl.jpg');
+  }
+}
+
+@media (min-width: 2000px) {
+  #index-page-body {
+    background-image: url('images/duck.jpg');
+  }
+
+  #my-story-page-body {
+    background-image: url('images/beach.jpg');
   }
 }
