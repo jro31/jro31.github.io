@@ -7,7 +7,7 @@ function populateNavbar() {
         '</div>' +
         '<div id="desktop-menu" class="d-none d-md-flex justify-content-end align-items-center h-100 pr-5"></div>' +
       '</div>' +
-      '<div id="mobile-menu-items" class="d-none"></div>' +
+      '<div id="mobile-menu-items" class="d-none w-100 position-absolute"></div>' +
     '</div>'
   );
   populateMenu();
