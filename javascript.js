@@ -27,11 +27,13 @@ function populateMenu() {
 }
 
 function menuItems() {
-  return ([
-    { title: 'My story', iClass: 'fas fa-globe', link: 'my_story' },
-    { title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects' },
-    { title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact' }
-  ])
+  var menuItemsArray = []
+  var currentPage = window.location.href.split("/").slice(-1)[0]
+  if (currentPage !== 'index.html') menuItemsArray.push({ title: 'Home', iClass: 'fas fa-home', link: 'index' })
+  if (currentPage !== 'my_story.html') menuItemsArray.push({ title: 'My story', iClass: 'fas fa-globe', link: 'my_story' })
+  if (currentPage !== 'projects.html') menuItemsArray.push({ title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects' })
+  if (currentPage !== 'contact.html') menuItemsArray.push({ title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact' })
+  return menuItemsArray
 }
 
 function typeWriter() {

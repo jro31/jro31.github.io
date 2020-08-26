@@ -15,6 +15,15 @@ body {
   background-size: 100% auto;
 }
 
+#my-story-page-body h1, #my-story-page-body h2 {
+  font-family: cursive;
+  text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
+}
+
+#my-story-page-body h2 {
+  font-size: 22px;
+}
+
 #custom-navbar-container a {
   color: black;
   text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
@@ -74,6 +83,15 @@ body {
   text-align: right;
 }
 
+#story-part {
+  border-radius: 5px;
+  background-color: #252d38;
+}
+
+#story-part p {
+  color: #c4c6c9;
+}
+
 @media (min-width: 576px) {
   .typewriter {
     font-size: 30px;
@@ -83,6 +101,10 @@ body {
 @media (min-width: 768px) {
   #mobile-menu-items {
     display: none;
+  }
+
+  #my-story-page-body h2 {
+    font-size: 28px;
   }
 
   #duck {
