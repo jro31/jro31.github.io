@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+#my-story-page-body {
+  background-image: url('images/beach.jpg');
+  background-size: 100% auto;
+}
+
 #custom-navbar-container a {
   color: black;
   text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;
