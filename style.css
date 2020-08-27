@@ -55,7 +55,7 @@ body {
 }
 
 #hamburger {
-
+  cursor: pointer;
 }
 
 #mobile-menu-items {
