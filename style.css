@@ -26,6 +26,12 @@ body {
 }
 
 #projects-page-body {
+  background-image: url('images/forest_xs.jpg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+
+#projects-page-body {
   background-color: gray;
 }
 
@@ -111,7 +117,7 @@ body {
 }
 
 .timeline-line {
-  width: 5px;
+  width: 4px;
   background-color: white;
 }
 
@@ -127,6 +133,11 @@ body {
   height: calc(100% - 40px);
 }
 
+.timeline-part h4 {
+  color: #c4c6c9;
+  font-size: 1.3rem;
+}
+
 .timeline-gap .timeline-line {
   height: 50px;
 }
@@ -138,6 +149,10 @@ body {
 
   #my-story-page-body {
     background-image: url('images/beach_sm.jpg');
+  }
+
+  #projects-page-body {
+    background-image: url('images/forest_sm.jpg');
   }
 
   .typewriter {
@@ -156,6 +171,10 @@ body {
 
   #my-story-page-body {
     background-image: url('images/beach_md.jpg');
+  }
+
+  #projects-page-body {
+    background-image: url('images/forest_md.jpg');
   }
 
   #mobile-menu-items {
@@ -188,6 +207,10 @@ body {
     background-image: url('images/beach_lg.jpg');
   }
 
+  #projects-page-body {
+    background-image: url('images/forest_lg.jpg');
+  }
+
   .typewriter {
     font-size: 40px;
   }
@@ -201,6 +224,10 @@ body {
   #my-story-page-body {
     background-image: url('images/beach_xl.jpg');
   }
+
+  #projects-page-body {
+    background-image: url('images/forest_xl.jpg');
+  }
 }
 
 @media (min-width: 1500px) {
@@ -211,6 +238,10 @@ body {
   #my-story-page-body {
     background-image: url('images/beach_xxl.jpg');
   }
+
+  #projects-page-body {
+    background-image: url('images/forest_xxl.jpg');
+  }
 }
 
 @media (min-width: 2000px) {
@@ -220,5 +251,9 @@ body {
 
   #my-story-page-body {
     background-image: url('images/beach.jpg');
+  }
+
+  #projects-page-body {
+    background-image: url('images/forest.jpg');
   }
 }
