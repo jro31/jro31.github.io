@@ -32,7 +32,7 @@ body {
 }
 
 #contact-page-body {
-  background-image: url('images/lake.jpg');
+  background-image: url('images/lake_xs.jpg');
   background-size: cover;
   background-position: right center;
 }
@@ -169,6 +169,10 @@ body {
     background-image: url('images/forest_sm.jpg');
   }
 
+  #contact-page-body {
+    background-image: url('images/lake_sm.jpg');
+  }
+
   .typewriter {
     font-size: 30px;
   }
@@ -189,6 +193,10 @@ body {
 
   #projects-page-body {
     background-image: url('images/forest_md.jpg');
+  }
+
+  #contact-page-body {
+    background-image: url('images/lake_md.jpg');
   }
 
   #mobile-menu-items {
@@ -225,6 +233,10 @@ body {
     background-image: url('images/forest_lg.jpg');
   }
 
+  #contact-page-body {
+    background-image: url('images/lake_lg.jpg');
+  }
+
   .typewriter {
     font-size: 40px;
   }
@@ -242,6 +254,10 @@ body {
   #projects-page-body {
     background-image: url('images/forest_xl.jpg');
   }
+
+  #contact-page-body {
+    background-image: url('images/lake_xl.jpg');
+  }
 }
 
 @media (min-width: 1500px) {
@@ -256,6 +272,10 @@ body {
   #projects-page-body {
     background-image: url('images/forest_xxl.jpg');
   }
+
+  #contact-page-body {
+    background-image: url('images/lake_xxl.jpg');
+  }
 }
 
 @media (min-width: 2000px) {
@@ -269,5 +289,9 @@ body {
 
   #projects-page-body {
     background-image: url('images/forest.jpg');
+  }
+
+  #contact-page-body {
+    background-image: url('images/lake.jpg');
   }
 }
