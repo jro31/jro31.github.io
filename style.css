@@ -31,6 +31,16 @@ body {
   background-repeat: repeat-y;
 }
 
+#contact-page-body {
+  background-image: url('images/lake.jpg');
+  background-size: cover;
+  background-position: right center;
+}
+
+#contact-page-body a:hover {
+  text-decoration: none;
+}
+
 #projects-page-body {
   background-color: gray;
 }
@@ -92,12 +102,12 @@ body {
   text-align: right;
 }
 
-.story-part, .timeline-part {
+.story-part, .timeline-part, .contacts-part {
   border-radius: 5px;
   background-color: #252d38;
 }
 
-.story-part p, .timeline-part p {
+.story-part p, .timeline-part p, .contacts-part, .contacts-part a, .contacts-page-body a:hover {
   color: #c4c6c9;
 }
 
@@ -136,6 +146,14 @@ body {
 
 .timeline-gap .timeline-line {
   height: 50px;
+}
+
+.contacts-part p {
+  font-size: 20px;
+}
+
+.contacts-part i {
+  font-size: 40px;
 }
 
 @media (min-width: 576px) {
