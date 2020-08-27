@@ -93,7 +93,7 @@ function typeWriter() {
   }, initialPause)
 }
 
-$('body').on('click', '#hamburger', function() {
+$('body').on('click touch', '#hamburger', function() {
   $('#mobile-menu-items').toggleClass('d-none')
 })
 
