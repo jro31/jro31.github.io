@@ -3,7 +3,7 @@ function populateNavbar() {
     '<div id="custom-navbar-container">' +
       '<div id="custom-navbar">' +
         '<div id="mobile-menu" class="d-flex d-md-none justify-content-center align-items-center h-100">' +
-          '<i id="hamburger" class="fas fa-bars"></i>' +
+          '<a href="#"><i id="hamburger" class="fas fa-bars"></i></a>' +
         '</div>' +
         '<div id="desktop-menu" class="d-none d-md-flex justify-content-end align-items-center h-100 pr-5"></div>' +
       '</div>' +
@@ -93,11 +93,20 @@ function typeWriter() {
   }, initialPause)
 }
 
-$(document).click(function(click) {
-  if (click.target.id === 'hamburger') {
-    $('#mobile-menu-items').toggleClass('d-none')
-  }
+$('body').on('click', '#hamburger', function(click) {
+  // console.log($('#mobile-menu-items').attr('class'))
+  $('#mobile-menu-items').toggleClass('d-none')
 })
+
+// $(document).click(function(click) {
+//   if (click.target.id === 'hamburger') {
+//     $('#mobile-menu-items').toggleClass('d-none')
+//   }
+// })
+
+// $('#hamburger').click(function() {
+//   console.log('&&&&&&&&&&&&&&')
+// })
 
 window.onload = function() {
   populateNavbar();
