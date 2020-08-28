@@ -93,8 +93,10 @@ function typeWriter() {
   }, initialPause)
 }
 
-$('body').on('click touch', '#hamburger', function() {
-  $('#mobile-menu-items').toggleClass('d-none')
+$(document).click(function(click) {
+  if (click.target.id === 'hamburger') {
+    $('#mobile-menu-items').toggleClass('d-none')
+  }
 })
 
 window.onload = function() {
