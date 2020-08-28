@@ -37,7 +37,7 @@ body {
   background-position: right center;
 }
 
-#projects-page-body a:hover,#contact-page-body a:hover {
+#projects-page-body a:hover, #contact-page-body a:hover {
   text-decoration: none;
 }
 
@@ -142,6 +142,10 @@ body {
 
 .timeline-gap .timeline-line {
   height: 50px;
+}
+
+.project-description a, .project-description a:hover {
+  text-decoration: underline !important;
 }
 
 .contacts-part p {
