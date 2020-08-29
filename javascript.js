@@ -118,8 +118,46 @@ function populateMyStory() {
 
 function myStorySections() {
   return [
-    { title: 'The pre-coding years', content: ['Once upon a time in somewhere...', 'Second paragraph'] },
-    { title: 'Section 2', content: ['Second section', 'More'] }
+    { title: 'The pre-coding years', content: [
+      "As I graduated with a business degree in 2008, it was of the firm belief that the world was too big, and life to short to spend the next forty years sitting in an office.",
+      "So rather than follow my peers into a career I could not escape, I picked-up my backpack, at this time with only a few months of travel under its belt, and left for what was to be an indefinite trip.",
+      "Money was always an issue, so I stopped for work when I needed it, and the rest of the time travelled on the tightest of shoe strings, often hitch-hiking and sleeping in the one-man tent that lived in my backpack, and others on the cheapest public transport I could find and staying in hostel dorms or couch-surfing. A lifestyle which in four years took me to more of the world than most people see in a lifetime.",
+      "Yet, as with anything, you can have too much of a good thing. Travelling, like anything, can become mundane. As it had for me. When you've been to dozens of countries, or stayed in hundreds of hostels, there's no excitement to go to one more.",
+      "I needed some meaning in my life. Some stability, and a place to call home. After years of staying in shared rooms for one or two nights at a time, packing up my possessions, and moving on. Meeting people, becoming great friends, then two days later never seeing them again.",
+      "The excitement of seeing the world had long worn-off, and I sought new spark in my life. Yet I did not wish to return home, to the country I'd spent the preceding twenty-two years. What unknown could welcome me to the place that I'd grown up?",
+      "Instead I desired to build a deeper connection to the places that I went. Something that could not come from spending just days is every location I visited.",
+      "Money was also tight, so I turned to the one skill bestowed upon me at birth, yet sought the world over: English.",
+      "In Bangkok I attained the Cambridge University CELTA teaching qualification, and for six more years I remained abroad, teaching English as a foreign language.",
+      "It was a career I immediately took to. I relished emotional reward that came from sharing knowledge with people much more than the financial reward, and as such took the potential impact I could have on people's futures very seriously.",
+      "That is not to say that the financial reward was not sufficient. Even though I earned far less than I could have lived comfortably on in London, by local standards I earned far above average, and lived a very good life as a result.",
+      "But alas, as much as I enjoyed my chosen career, it was not one I felt that I could do forever.",
+      "Although I was financially comfortable by local standards, it was a job that would afford me enough to retire on. And I didn't want to make the same mistakes as some of the older teachers that I worked with, of teaching until it was too late to do anything else. So at the end of my fifth year as a teacher, I made a promise to myself that the next year, the sixth, would be my last. And I'd use that year to find my next path.",
+      "I had one year to explore any pipe-dreams that I had, to see if I could turn them into a reality.",
+      "For example, I'd always wanted to be a novelist. So one day I sat down at my laptop, and I started to write a book.",
+      "I got five thousand words into it before I realised... I've got nothing left to write. And I appreciated that being a writer wasn't the right career for me."
+    ]},
+    { title: 'Inception', content: [
+      "Another of my pipe-dreams had been to become a software engineer. Specifically, I wanted to create iPhone apps.",
+      "For years there had been apps that I wished that existed, and I kept on waiting for people to make them, but no one ever did.",
+      "With no coding knowledge, other than a teach yourself HTML and CSS book from more than a decade earlier, the idea of creating them myself seemed very far-fetched. But this year was about exploring my pipe-dreams.",
+      "I'd always felt I'd be good at coding. I'm a logical-thinking person, enjoying playing Tetris, and sudoku for example. I pay great attention to detail, to an almost unhealthy level. And I'm tenacious, resourceful, and not afraid to follow my own path.",
+      "With what little knowledge I possessed, I felt that these personality traits would guide me well.",
+      "The biggest obstacle I faced however, was for someone who'd learned financial responsibility to an extent most don't have to, by sleeping outdoors sometimes to save $10 on a hostel while I was backpacking, the idea of spending what to me at the time would be a small fortune on a MacBook, seeing as the £300, 5 year old Windows laptop that I currently owned, couldn't help me to make iPhone apps, was daunting.",
+      "For my own peace of mind, I had to know with reasonable certainty that I wasn't going to give up on this dream as easily as I had that of becoming a writer. But after weeks of flip-flopping back and forth, I eventually convinced myself to take the plunge, under the guise that... I don't want to spend my life not knowing. Asking myself, 'what if?'",
+      "Living again in Bangkok, in what was now just after New Year of 2018, I took the train to the shopping mall that I'd frequented on many of the days prior, to just use the MacBooks that they had on display there, and bought what was then, and is until now by far the most expensive thing I've ever bought; a brand new MacBook Pro.",
+      "I started with a Udemy course, then later moved onto the 'Hacking with Swift' book as my introduction to coding was the Swift language, as my goal at this time was still to create iPhone apps.",
+      "And I took to it like a drug. I relished the moments when I would sit there exasperated, swearing at my computer. They were worth it for the moments ecstasy when I finally figured-out what was wrong, and fixed the bug that had taunted me for hours.",
+      "Yet, although I was learning, and very much enjoying doing so, I was still working full-time as an English teacher. And had come to appreciate that learning to code could not be a part-time hobby that I did as an aside from my full-time job, if I truly wanted to turn it into a career. When work was busy, I'd sometimes have to go weeks without coding anything, as my supposedly 'free time' was taken up with planning lessons and correcting student essays. I could either focus all my energy on coding, and give up on teaching. Or I could do the opposite. But there just were not enough hours in the day to do both.",
+      "It was with a heavy heart that I turned my back on teaching, having been my career for the last six years. And I did so with the realisation that it would mean leaving Bangkok; a place that now in my second stint living here, had been my home for the last three years, and the place I'd been more settled than at any other point in my adult life.",
+      "After years of living out of a backpack, I had the greatest of luxuries that you miss when you're travelling.",
+      "Comfort. Familiarity. Local knowledge. A place that is yours. Things that you only have an appreciation for when you no longer have them. I was going to throw all of these away, to fit my life into a backpack once again.",
+      "I'd decided that I was leaving my job and my career as a teacher, but had long been thinking about the best way to learn to code. Money was a huge factor, and leaving my job and my career behind, I could no longer treat coding as a hobby. I had to turn it into an income. And fast.",
+      "Initially my intention had been to find a quiet, secluded, cheap corner of the world, to lock myself away, live off my savings, and not emerge again until I'd been able to secure a job as a developer. But a friend then sent me a link to <a href='https://www.freecodecamp.org/news/how-i-landed-a-full-stack-developer-job-without-a-tech-degree-or-work-experience-6add97be2051/' target='_blank'>an article</a> that changed everything.",
+      "I wrestled with the cost of attending a bootcamp versus the time that could buy me to teach myself. I researched, I pondered, I contacted anyone I could. But ultimately I decided that, just like the English teaching course I'd attended six years earlier, if I wanted to learn to code, and to do so quickly, then this was the best way. Following an established curriculum and having people on hand to ask for assistance, would be worth the money. And six years a teacher, of watching some students succeed and others fail, I knew what it took to learn. I knew how much I was going to have to put into it. And I knew that I could do it.",
+    ]},
+    { title: 'The bootcamp', content: [
+
+    ]}
   ]
 }
 
