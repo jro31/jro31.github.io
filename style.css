@@ -37,7 +37,7 @@ body {
   background-position: right center;
 }
 
-#projects-page-body a:hover, #contact-page-body a:hover {
+#my-story-page-body a:hover, #projects-page-body a:hover, #contact-page-body a:hover {
   text-decoration: none;
 }
 
@@ -98,12 +98,23 @@ body {
   text-align: right;
 }
 
+#my-story-container .gap-beneath {
+  margin-bottom: 50px;
+}
+
+#page-shortcuts p {
+  font-family: cursive;
+  /*text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;*/
+  color: black;
+  font-size: 1.5rem;
+}
+
 .story-part, .timeline-part, .contacts-part {
   border-radius: 5px;
   background-color: #252d38;
 }
 
-.story-part p, .timeline-part p, .timeline-part a, .timeline-part a:hover, .contacts-part, .contacts-part a, .contacts-page-body a:hover {
+#page-shortcuts a, .story-part p, .timeline-part p, .timeline-part a, .timeline-part a:hover, .contacts-part, .contacts-part a, .contacts-page-body a:hover {
   color: #c4c6c9;
 }
 

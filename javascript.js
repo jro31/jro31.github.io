@@ -36,6 +36,36 @@ function menuItems() {
   return menuItemsArray
 }
 
+function populateMyStory() {
+  $.each(myStorySections(), function(index, section) {
+    $('#my-story-container').append(
+      (index === 0 ? '<div class="row"><div class="col-12 col-md-10 offset-md-1 text-center" id="page-shortcuts"></div></div>' : '') +
+      `<div class="row ${(index +1) < myStorySections().length ? 'gap-beneath' : ''}" id="${sectionId(section.title)}">` +
+        '<div class="col-12 col-md-10 offset-md-1">' +
+          '<div class="p-2 px-md-5 py-md-3 story-part">' +
+            `<h2 class="text-left">${section.title}</h2>` +
+            $.map(section.content, function(paragraph, _) { return `<p>${paragraph}</p>` }) +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    )
+    $('#page-shortcuts').append(
+      `<a href="#${sectionId(section.title)}"><p class="mb-1">${section.title}</p></a>`
+    )
+  })
+}
+
+function myStorySections() {
+  return [
+    { title: 'The pre-coding years', content: ['Once upon a time in somewhere...', 'Second paragraph'] },
+    { title: 'Section 2', content: ['Second section', 'More'] }
+  ]
+}
+
+function sectionId(title) {
+  return title.toLowerCase().replace(/[^0-9a-z]/gi, '-')
+}
+
 function populateTimeline() {
   var currentYear = null
   $.each(timelineItems(), function(index, item) {
@@ -76,7 +106,6 @@ function populateTimeline() {
 }
 
 function timelineItems() {
-  // { year: , title: , languages: [], description: "", site_url: , github_url: },
   return [
     { year: 2018, title: 'Hangman', languages: ['Swift'], description: "My coding journey started in 2018 by self-teaching Swift using the 'Hacking with Swift' book, as my initial goal from coding was to make iPhone apps. The book issued various challenges, and this one I consider the first app that I really created myself (I don't count 'Hello World'), as it didn't offer any example code to get you started. So it was just me, the things I'd learnt and Google, against the world. Three days and lots of swearing later, I'd done it; a fully-working iPhone hangman app.", site_url: null, github_url: 'https://github.com/jro31/Hangman' },
     { year: 2018, title: 'Notes', languages: ['Swift'], description: "Imitation is the highest form of flattery, and four challenges later, we'd gone from novice coders to aiming to replicate Apple's own apps. In a variation of Gordon Ramsey's taste it then make it, the challenge was to re-create the iPhone's 'Notes' app.", site_url: null, github_url: 'https://github.com/jro31/Notes' },
@@ -170,4 +199,5 @@ window.onload = function() {
   populateNavbar();
   typeWriter();
   populateTimeline();
+  populateMyStory();
 }
