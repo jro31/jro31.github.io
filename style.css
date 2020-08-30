@@ -104,7 +104,6 @@ body {
 
 #page-shortcuts p {
   font-family: cursive;
-  /*text-shadow: -1px -1px 0 #FFF, 1px -1px 0 #FFF, -1px 1px 0 #FFF, 1px 1px 0 #FFF;*/
   color: black;
   font-size: 1.5rem;
 }
@@ -114,8 +113,12 @@ body {
   background-color: #252d38;
 }
 
-#page-shortcuts a, .story-part p, .timeline-part p, .timeline-part a, .timeline-part a:hover, .contacts-part, .contacts-part a, .contacts-page-body a:hover {
+#page-shortcuts a, .story-part p, .story-part p a, .timeline-part p, .timeline-part a, .timeline-part a:hover, .contacts-part, .contacts-part a, .contacts-page-body a:hover {
   color: #c4c6c9;
+}
+
+.story-part p a, .project-description a, .project-description a:hover {
+  text-decoration: underline !important;
 }
 
 .timeline-year {
@@ -153,10 +156,6 @@ body {
 
 .timeline-gap .timeline-line {
   height: 50px;
-}
-
-.project-description a, .project-description a:hover {
-  text-decoration: underline !important;
 }
 
 .contacts-part p {
