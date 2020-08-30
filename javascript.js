@@ -105,7 +105,7 @@ function populateMyStory() {
         '<div class="col-12 col-md-10 offset-md-1">' +
           '<div class="p-2 px-md-5 py-md-3 story-part">' +
             `<h2 class="text-left">${section.title}</h2>` +
-            $.map(section.content, function(paragraph, _) { return `<p>${paragraph}</p>` }) +
+            $.map(section.content, function(paragraph, _) { return `<p>${paragraph}</p>` }).join('') +
           '</div>' +
         '</div>' +
       '</div>'
