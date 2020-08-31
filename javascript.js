@@ -29,7 +29,7 @@ function populateMenu() {
 function menuItems() {
   var menuItemsArray = []
   var currentPage = window.location.href.split("/").slice(-1)[0]
-  if (currentPage !== 'index.html') menuItemsArray.push({ title: 'Home', iClass: 'fas fa-home', link: 'index' })
+  if (currentPage !== 'index.html' && window.location.href !== 'https://www.jethrowilliams.com/') menuItemsArray.push({ title: 'Home', iClass: 'fas fa-home', link: 'index' })
   if (currentPage !== 'my_story.html') menuItemsArray.push({ title: 'My story', iClass: 'fas fa-globe', link: 'my_story' })
   if (currentPage !== 'projects.html') menuItemsArray.push({ title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects' })
   if (currentPage !== 'contact.html') menuItemsArray.push({ title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact' })
