@@ -17,7 +17,7 @@ function populateMenu() {
   $.each(menuItems(), function(_, item) {
     $('#mobile-menu-items, #desktop-menu').append(
       '<div class="py-3 pl-3 p-md-0 m-0 ml-md-5">' +
-        `<a href="${item.link}.html">` +
+        `<a href="${item.link}" target="${item.newWindow ? '_blank' : ''}">` +
           `<i class="${item.iClass}"></i>` +
           `<span class="m-1">${item.title}</span>` +
         '</a>' +
@@ -29,10 +29,11 @@ function populateMenu() {
 function menuItems() {
   var menuItemsArray = []
   var currentPage = window.location.href.split("/").slice(-1)[0]
-  if (currentPage !== 'index.html' && window.location.href !== 'https://www.jethrowilliams.com/') menuItemsArray.push({ title: 'Home', iClass: 'fas fa-home', link: 'index' })
-  if (!currentPage.includes('my_story.html')) menuItemsArray.push({ title: 'My story', iClass: 'fas fa-globe', link: 'my_story' })
-  if (currentPage !== 'projects.html') menuItemsArray.push({ title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects' })
-  if (currentPage !== 'contact.html') menuItemsArray.push({ title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact' })
+  if (currentPage !== 'index.html' && window.location.href !== 'https://www.jethrowilliams.com/') menuItemsArray.push({ title: 'Home', iClass: 'fas fa-home', link: 'index.html', newWindow: false })
+  if (!currentPage.includes('my_story.html')) menuItemsArray.push({ title: 'My story', iClass: 'fas fa-globe', link: 'my_story.html', newWindow: false })
+  if (currentPage !== 'projects.html') menuItemsArray.push({ title: 'Projects', iClass: 'fas fa-layer-group', link: 'projects.html', newWindow: false })
+  if (currentPage !== 'contact.html') menuItemsArray.push({ title: 'Contact', iClass: 'fas fa-pencil-alt', link: 'contact.html', newWindow: false })
+  menuItemsArray.push({ title: 'Resume', iClass: 'fas fa-file-pdf', link: 'resume.pdf', newWindow: true })
   return menuItemsArray
 }
 
